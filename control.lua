@@ -57,9 +57,9 @@ script.on_event("slowkey-slow",
         debug("SlowKey disable: Change="..change.." cur="..cur_modifier.." last="..pdata.last_modifier)
         player.character_running_speed_modifier = change
         info_gui(player, false)
-        --Free up uneeded variables
+        --Free up unneeded variables
         pdata.saved_modifier, pdata.last_modifier = nil, nil
-      else --We are at normal speed, lets slow down
+      else --We are at normal speed, let's slow down
         pdata.last_modifier = cur_modifier --Save a copy of the players current modifier in case it gets changed.
         pdata.saved_modifier = pdata.modifier --Save a copy of the slow modifier in case we change it.
         player.character_running_speed_modifier = pdata.modifier
